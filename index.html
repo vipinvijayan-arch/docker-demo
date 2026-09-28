@@ -1,10 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Docker Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Docker CI/CD Demo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .docker {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 19px;
+            color: #dbeafe;
+            margin-bottom: 30px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #22c55e;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.12);
+            padding: 25px;
+            border-radius: 15px;
+            width: 220px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #dbeafe;
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 14px;
+            color: #bfdbfe;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: white;
+            color: #1e3a8a;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #dbeafe;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello from Docker!!!!!</h1>
-    <p>This application is running inside a Docker container.</p>
+
+    <div class="container">
+
+        <div class="docker">🐳</div>
+
+        <h1>Hello V!p!n !!!</h1>
+
+        <p class="subtitle">
+            Welcome to my Ospyn Test Application
+        </p>
+
+        <div class="status">
+            ● OspynDocs Running
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>🐳 DDFS</h2>
+                <p>Application running inside a Docker container.</p>
+            </div>
+
+            <div class="card">
+                <h2>⚙️ OspynDocs</h2>
+                <p>Automated build and deployment using Jenkins.</p>
+            </div>
+
+            <div class="card">
+                <h2>🚀 OspynNeo</h2>
+                <p>Code changes can be automatically deployed.</p>
+            </div>
+
+        </div>
+
+        <a class="button" href="https://portal-uat.dhan.bank.in/sa-portal" target="_blank">
+            Explore Ospyn Neo
+        </a>
+
+        <div class="footer">
+            DDFS • OspynDocs • Neo • OspynNeo
+        </div>
+
+    </div>
+
 </body>
 </html>
