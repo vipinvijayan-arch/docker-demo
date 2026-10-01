@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t docker-demo:${BUILD_NUMBER} .'
@@ -31,8 +25,10 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'sleep 3'
-                sh 'curl -f http://localhost:8080/'
+                sh '''
+                    sleep 3
+                    curl -4 -f --max-time 10 http://127.0.0.1:8080/
+                '''
             }
         }
     }
